@@ -1,4 +1,4 @@
-import { UrlRegister } from "./controller/template.js";
+import { UrlRegister } from "./template.js";
 
 // Fungsi untuk melakukan login
 function register() {

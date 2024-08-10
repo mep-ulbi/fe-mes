@@ -1,4 +1,4 @@
-import { UrlLogin } from "./controller/template.js";
+import { UrlLogin } from "./template.js";
 
 // Fungsi untuk melakukan login
 function login() {
