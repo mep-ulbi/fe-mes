@@ -152,75 +152,64 @@
     </div>
   </div>
 </nav>
-            <div class="row mt-1 mb-4">
-                <div class="col-md-3">
-                    <label for="ppic">PPIC</label>
-                    <input type="text" class="form-control" id="ppic" placeholder="Cari Nama PPIC">
-                </div>
-                <div class="col-md-9 d-flex justify-content-end">
-                    <div class="col-md-3 mt-4">
-                        <input type="text" class="form-control" id="exampleInputIconLeft" placeholder="Search" aria-label="Search">
-                    </div>
-                </div>
-            </div>
-
+            <!-- Content Start -->
             <div class="row">
                 <div class="col-12 mb-4">
-                    <div class="card border-0 shadow">
+                    <div class="card border-0 shadow components-section">
                         <div class="card-header">
                             <div class="row align-items-center">
                                 <div class="col">
-                                    <h2 class="fs-5 fw-bold mb-0">Input Data Master Produksi</h2>
-                                </div>
-                                <div class="col text-end">
-                                    <a href="#" class="btn btn-sm btn-primary">Tambah User</a>
+                                    <h2 class="fs-5 fw-bold mb-0">Buat User</h2>
                                 </div>
                             </div>
                         </div>
-                        <div class="table-responsive">
-                            <table class="table align-items-center table-flush">
-                                <thead class="thead-light" style="text-align: center;">
-                                <tr>
-                                    <th class="border-bottom" scope="col">No</th>
-                                    <th class="border-bottom" scope="col">Username</th>
-                                    <th class="border-bottom" scope="col">Password</th>
-                                    <th class="border-bottom" scope="col">Email</th>
-                                    <th class="border-bottom" scope="col">Role</th>
-                                    <th class="border-bottom" scope="col">Action</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr style="text-align: center;">
-                                    <th class="text-gray-900" scope="row">
-                                        1
-                                    </th>
-                                    <td class="fw-bolder text-gray-500">
-                                        Bachtiar21
-                                    </td>
-                                    <td class="fw-bolder text-gray-500">
-                                        **********
-                                    </td>
-                                    <td class="fw-bolder text-gray-500">
-                                        bachtiarramadhan26@gmail.com
-                                    </td>
-                                    <td class="fw-bolder text-gray-500">
-                                        Manager
-                                    </td>
-                                    <td>
-                                        <a href="#" class="btn btn-sm btn-info">Detail</a>
-                                        <a href="#" class="btn btn-sm btn-warning">Edit</a>
-                                        <a href="#" class="btn btn-sm btn-danger">Hapus</a>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
+                        <div class="card-body">     
+                            <div class="row mb-4">
+                                <div class="row">
+                                    <!-- Form kiri -->
+                                    <div class="col-md-6 mb-4">
+                                        <label for="name">Nama</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Masukkan Nama">
+                                    </div>
+                                    <!-- Form kanan -->
+                                    <div class="col-md-6 mb-4">
+                                        <label for="email">Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Masukkan Email">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <!-- Form kiri -->
+                                    <div class="col-md-6 mb-4">
+                                        <label for="password">Password</label>
+                                        <input type="password" class="form-control" id="password" placeholder="Masukkan Password">
+                                    </div>
+                                    <!-- Form kanan -->
+                                    <div class="col-md-6 mb-4">
+                                        <label for="role">Role</label>
+                                        <select class="form-select" id="role_id" aria-label="Default select example">
+                                            <option selected>Pilih Role</option>
+                                            <option value="1">PPIC</option>
+                                            <option value="2">Production Engineering</option>
+                                            <option value="3">Production Operation</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                        <button class="btn btn-info mt-4" type="button" onclick="window.history.back();">Kembali</button>
+                        <button id="tambahButton" class="btn btn-primary mt-4 ms-2" type="button">Tambah User</button>
                     </div>
                 </div>
             </div>
         </main>
 
-    <!-- Core -->
+<!-- JS Core -->
+<script src="../../static/js/manager/user-create.js" type="module"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- Core -->
 <script src="../../vendor/@popperjs/core/dist/umd/popper.min.js"></script>
 <script src="../../vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 
