@@ -1,8 +1,8 @@
-import { UrlUsers, requestOptionsGet, requestOptionsDelete } from "../controller/template.js";
+import { UrlProductions, requestOptionsGet, requestOptionsDelete } from "../controller/template.js";
 
 // Fetch Data User
 document.addEventListener('DOMContentLoaded', function() {
-    fetch(UrlUsers, requestOptionsGet)
+    fetch(UrlProductions, requestOptionsGet)
         .then(response => response.json())
         .then(data => updateTable(data))
         .catch(error => console.error('Error fetching data:', error));
@@ -11,19 +11,20 @@ document.addEventListener('DOMContentLoaded', function() {
         const tableBody = document.getElementById('tableBody');
         tableBody.innerHTML = '';
 
-        data.data.forEach((user, index) => {
+        data.data.forEach((production, index) => {
             const row = document.createElement('tr');
             row.style.textAlign = 'center';
             row.innerHTML = `
                 <th class="text-gray-900" scope="row">${index + 1}</th>
-                <td class="fw-bolder text-gray-500">${user.name}</td>
-                <td class="fw-bolder text-gray-500">**********</td> <!-- Sengaja tidak menampilkan password -->
-                <td class="fw-bolder text-gray-500">${user.email}</td>
-                <td class="fw-bolder text-gray-500">${user.role.name}</td>
+                <td class="fw-bolder text-gray-500">${production.kode_produk}</td>
+                <td class="fw-bolder text-gray-500">${production.nama_produk}</td>
+                <td class="fw-bolder text-gray-500">${production.tahapan_proses}</td>
+                <td class="fw-bolder text-gray-500">${production.nama_proses_modul}</td>
+                <td class="fw-bolder text-gray-500">${production.detail_proses}</td>
                 <td>
-                    <button class="btn btn-sm btn-info" data-user="${user.id}">Detail</button>
-                    <button class="btn btn-sm btn-warning" data-user="${user.id}">Edit</button>
-                    <button class="btn btn-sm btn-danger" data-user="${user.id}">Hapus</button>
+                    <button class="btn btn-sm btn-info" data-production="${production.id}">Detail</button>
+                    <button class="btn btn-sm btn-warning" data-production="${production.id}">Edit</button>
+                    <button class="btn btn-sm btn-danger" data-production="${production.id}">Hapus</button>
                 </td>
             `;
             tableBody.appendChild(row);
@@ -36,25 +37,25 @@ document.addEventListener('DOMContentLoaded', function() {
         // Event listener for detail buttons
         document.querySelectorAll('.btn-info').forEach(button => {
             button.addEventListener('click', event => {
-                const id = event.target.getAttribute('data-user');
-                window.location.href = `detail-user.html?id=${id}`;
+                const id = event.target.getAttribute('data-production');
+                window.location.href = `detail-produksi.html?id=${id}`;
             });
         });
     
         // Event listener for edit buttons
         document.querySelectorAll('.btn-warning').forEach(button => {
             button.addEventListener('click', event => {
-                const id = event.target.getAttribute('data-user');
-                window.location.href = `update-user.html?id=${id}`;
+                const id = event.target.getAttribute('data-production');
+                window.location.href = `update-produksi.html?id=${id}`;
             });
         });
     
         // Event listener for delete buttons
         document.querySelectorAll('.btn-danger').forEach(button => {
             button.addEventListener('click', event => {
-                const id = event.target.getAttribute('data-user');
+                const id = event.target.getAttribute('data-production');
                 Swal.fire({
-                    title: 'Hapus Data User?',
+                    title: 'Hapus Data Produksi?',
                     text: "Data tidak akan dapat mengembalikan ini!",
                     icon: 'warning',
                     showCancelButton: true,
@@ -63,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     confirmButtonText: 'Ya, Hapus!'
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        deleteUser(id);
+                        deleteProduction(id);
                     }
                 });
             });
@@ -72,14 +73,14 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Function Delete User
-function deleteUser(id) {
-    fetch(UrlUsers + `/${id}`, requestOptionsDelete)
+function deleteProduction(id) {
+    fetch(UrlProductions + `/${id}`, requestOptionsDelete)
         .then((response) => response.json())
         .then((data) => {
             // Display success SweetAlert
             Swal.fire({
                 title: 'Deleted!',
-                text: 'Data User Berhasil Dihapus.',
+                text: 'Data Produksi Berhasil Dihapus.',
                 icon: 'success',
                 timer: 1500,
                 showConfirmButton: false
@@ -92,7 +93,7 @@ function deleteUser(id) {
             // Display error SweetAlert
 			Swal.fire(
                 'Error!',
-                'Data User Gagal Dihapus',
+                'Data Produksi Gagal Dihapus',
                 'error'
                 );
         })
