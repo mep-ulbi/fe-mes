@@ -1,4 +1,4 @@
-import { UrlCreateUser, requestOptionsPost } from "../controller/template.js";
+import { UrlUsers, requestOptionsPost } from "../controller/template.js";
 
 // Fungsi untuk melakukan login
 function tambahUser() {
@@ -7,7 +7,7 @@ function tambahUser() {
     var password = document.getElementById("password").value;
     var role = document.getElementById("role_id").value;
 
-    fetch(UrlCreateUser, requestOptionsPost, {
+    fetch(UrlUsers, requestOptionsPost, {
         body: JSON.stringify({
             name: name,
             email: email,

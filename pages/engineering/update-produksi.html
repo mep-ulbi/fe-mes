@@ -189,7 +189,7 @@
                             </a>
                         </li>
                         <li class="breadcrumb-item">Data Master</li>
-                        <li class="breadcrumb-item active" aria-current="page">Edit Mesin</li>
+                        <li class="breadcrumb-item active" aria-current="page">Edit Produksi</li>
                     </ol>
                 </nav>
             </div> 
@@ -228,12 +228,12 @@
                                     <!-- Form Input -->
                                     <div class="col-md-6 mb-4">
                                         <label for="nama_proses">Nama Proses/Detail</label>
-                                        <input type="text" class="form-control" id="nama_proses" placeholder="Masukkan Nama Proses/Modul">
+                                        <input type="text" class="form-control" id="nama_proses_modul" placeholder="Masukkan Nama Proses/Modul">
                                     </div>
                                     <!-- Form Input -->
                                     <div class="col-md-12 mb-4">
-                                        <label for="nama_proses">Detail Proses</label>
-                                        <input type="text" class="form-control" id="nama_proses" placeholder="Masukkan Detail Proses">
+                                        <label for="detail_proses">Detail Proses</label>
+                                        <input type="text" class="form-control" id="detail_proses" placeholder="Masukkan Detail Proses">
                                     </div>
                                 </div>
                             </div>
@@ -241,14 +241,14 @@
                     </div>
                     <div class="d-flex justify-content-end">
                         <button class="btn btn-info mt-4" type="button" onclick="window.history.back();">Kembali</button>
-                        <button id="tambahButton" class="btn btn-warning mt-4 ms-2" type="button">Update Input Produksi</button>
+                        <button id="editButton" class="btn btn-warning mt-4 ms-2" type="button">Edit Input Produksi</button>
                     </div>
                 </div>
             </div>
         </main>
 
 <!-- JS Core -->
-<script src="../../static/js/manager/user-create.js" type="module"></script>
+<script src="../../static/js/engineering/update-produksi.js" type="module"></script>
 <script src="../../static/js/controller/logout.js" type="module"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
