@@ -4,7 +4,7 @@
 <head> 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- Primary Meta Tags -->
-<title>MES | Manager</title>
+<title>MES | Engineering</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="title" content="MES">
 <meta name="author" content="Themesberg">
@@ -66,6 +66,7 @@
 
         <nav id="sidebarMenu" class="sidebar d-lg-block bg-gray-800 text-white collapse" data-simplebar>
   <div class="sidebar-inner px-4 pt-3">
+    <div id="sidebarContent"></div>
     <div class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
       <div class="d-flex align-items-center">
         <div class="avatar-lg me-4">
@@ -74,9 +75,9 @@
         </div>
         <div class="d-block">
           <h2 class="h5 mb-3">Hi, Jane</h2>
-          <a class="btn btn-secondary btn-sm d-inline-flex align-items-center logoutButton">
+          <a href="../../pages/examples/sign-in.html" class="btn btn-secondary btn-sm d-inline-flex align-items-center">
             <svg class="icon icon-xxs me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>            
-            Logout
+            Sign Out
           </a>
         </div>
       </div>
@@ -88,7 +89,7 @@
           </a>
       </div>
     </div>
-    <ul class="nav flex-column pt-3 pt-md-0">
+    <!-- <ul class="nav flex-column pt-3 pt-md-0">
       <li class="nav-item">
         <a href="../../index.html" class="nav-link d-flex align-items-center">
           <span class="sidebar-icon">
@@ -124,7 +125,7 @@
           role="list" id="submenu-app" aria-expanded="false">
           <ul class="flex-column nav">
             <li class="nav-item active">
-              <a class="nav-link" href="data-produksi.html">
+              <a class="nav-link" href="../../pages/engineering/data-produksi.html">
                 <span class="sidebar-text">Input Produksi</span>
               </a>
             </li>
@@ -134,14 +135,14 @@
           role="list" id="submenu-app" aria-expanded="false">
           <ul class="flex-column nav">
             <li class="nav-item ">
-              <a class="nav-link" href="data-mesin.html">
+              <a class="nav-link" href="../../pages/engineering/data-mesin.html">
                 <span class="sidebar-text">Input Mesin</span>
               </a>
             </li>
           </ul>
         </div>
       </li>
-    </ul>
+    </ul> -->
   </div>
 </nav>
     
@@ -155,7 +156,7 @@
       <!-- Navbar links -->
       <ul class="navbar-nav align-items-center">
         <li class="nav-item dropdown ms-lg-3">
-          <a class="nav-link dropdown-toggle pt-1 px-0" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle pt-1 px-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <div class="media d-flex align-items-center">
               <img class="avatar rounded-circle" alt="Image placeholder" src="../../assets/img/team/profile-picture-3.jpg">
               <div class="media-body ms-2 text-dark align-items-center d-none d-lg-block">
@@ -164,12 +165,12 @@
             </div>
           </a>
           <div class="dropdown-menu dashboard-dropdown dropdown-menu-end mt-2 py-1">
-            <a class="dropdown-item d-flex align-items-center">
+            <a class="dropdown-item d-flex align-items-center" href="#">
               <svg class="dropdown-icon text-gray-400 me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path></svg>
               My Profile
             </a>
             <div role="separator" class="dropdown-divider my-1"></div>
-            <a class="dropdown-item d-flex align-items-center logoutButton">
+            <a class="dropdown-item d-flex align-items-center logoutButton"  href="#" >
               <svg class="dropdown-icon text-danger me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>                
               Logout
             </a>
@@ -179,73 +180,80 @@
     </div>
   </div>
 </nav>
-            <!-- Content Start -->
             <div class="py-4">
                 <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
                     <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
                         <li class="breadcrumb-item">
-                            <a href="dashboard.html">
+                            <a href="../engineering/dashboard.html">
                                 <svg class="icon icon-xxs" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
                             </a>
                         </li>
                         <li class="breadcrumb-item">Data Master</li>
-                        <li class="breadcrumb-item active" aria-current="page">Edit Produksi</li>
+                        <li class="breadcrumb-item active" aria-current="page"><a href="../engineering/input-produksi.html">Input Produksi</a></li>
                     </ol>
                 </nav>
-            </div> 
+            </div>
 
-            <!-- Input Form -->
+            <div class="row mt-1 mb-4">
+                <div class="col-md-3">
+                    <label for="ppic">PPIC</label>
+                    <input type="text" class="form-control" id="ppic" placeholder="Cari Nama PPIC">
+                </div>
+                <div class="col-md-9 d-flex justify-content-end">
+                    <div class="col-md-3 mt-4">
+                        <input type="text" class="form-control" id="exampleInputIconLeft" placeholder="Search" aria-label="Search">
+                    </div>
+                </div>
+            </div>
+
             <div class="row">
                 <div class="col-12 mb-4">
-                    <div class="card border-0 shadow components-section">
+                    <div class="card border-0 shadow">
                         <div class="card-header">
                             <div class="row align-items-center">
                                 <div class="col">
-                                    <h2 class="fs-5 fw-bold mb-0">Edit Input Produksi</h2>
+                                    <h2 class="fs-5 fw-bold mb-0">Input Data Master Produksi</h2>
+                                </div>
+                                <div class="col text-end">
+                                    <a href="tambah-produksi.html" class="btn btn-sm btn-primary">Tambah Produksi</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="card-body">     
-                            <div class="row mb-4">
-                                <div class="row">
-                                    <!-- Form kiri -->
-                                    <div class="col-md-6 mb-4">
-                                        <label for="kode_produk">Kode Produk</label>
-                                        <input type="text" class="form-control" id="kode_produk" placeholder="Masukkan Kode Produk">
-                                    </div>
-                                    <!-- Form kanan -->
-                                    <div class="col-md-6 mb-4">
-                                        <label for="nama_produk">Nama Produk</label>
-                                        <input type="text" class="form-control" id="nama_produk" placeholder="Masukkan Nama Produk">
-                                    </div>
-                                </div>
-                                <div class="row">
-                         
+                        <div class="table-responsive">
+                            <table class="table align-items-center table-flush">
+                                <thead class="thead-light" style="text-align: center;">
+                                <tr>
+                                    <th class="border-bottom" scope="col">No</th>
+                                    <th class="border-bottom" scope="col">Kode Produk</th>
+                                    <th class="border-bottom" scope="col">Nama Produk</th></th>
+                                    <th class="border-bottom" scope="col">Download File</th>
+                                    <th class="border-bottom" scope="col">Monitoring Produksi dan Lead Time Produk</th>
+                                    <th class="border-bottom" scope="col">Tahapan Proses Produksi dan Lead Time</th>
+                                    <th class="border-bottom" scope="col">Waktu Baku Produksi</th>
+                                </tr>
+                                </thead>
 
-                                    <div class="col-md-12 mb-4">
-                                      <label for="productionFile">Upload File (Optional)</label>
-                                      <input type="file" class="form-control" id="productionFile" placeholder="Upload File Terkait Produksi">
-                                  </div>
-                                </div>
-                            </div>
+                                <!-- Fetch Data Start -->
+                                <tbody id="tableBody"></tbody>
+
+                                <!-- Fetch Data End -->
+
+                            </table>
+                            <div style="margin-right: 2%;" id="pagination" class="d-flex justify-content-end mb-4 "></div>                              
+
                         </div>
-                    </div>
-                    <div class="d-flex justify-content-end">
-                        <button class="btn btn-info mt-4" type="button" onclick="window.history.back();">Kembali</button>
-                        <button id="editButton" class="btn btn-warning mt-4 ms-2" type="button">Edit Input Produksi</button>
                     </div>
                 </div>
             </div>
         </main>
 
-<!-- JS Core -->
-<script src="../../static/js/engineering/update-produksi.js" type="module"></script>
-<script src="../../static/js/controller/logout.js" type="module"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-<!-- Core -->
+    <!-- Core -->
+     <script type="module" src="../../static/js/controller/sidebar.js
+     "></script>
+     <script type="module" src="../../static/js/controller/logout.js"></script>
 <script src="../../vendor/@popperjs/core/dist/umd/popper.min.js"></script>
 <script src="../../vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../static/js/operation/data-produksi.js" type="module"></script>
 
 <!-- Vendor JS -->
 <script src="../../vendor/onscreen/dist/on-screen.umd.min.js"></script>

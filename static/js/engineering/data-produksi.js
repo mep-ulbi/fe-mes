@@ -18,9 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <th class="text-gray-900" scope="row">${index + 1}</th>
                 <td class="fw-bolder text-gray-500">${production.kode_produk}</td>
                 <td class="fw-bolder text-gray-500">${production.nama_produk}</td>
-                <td class="fw-bolder text-gray-500">${production.tahapan_proses}</td>
-                <td class="fw-bolder text-gray-500">${production.nama_proses_modul}</td>
-                <td class="fw-bolder text-gray-500">${production.detail_proses}</td>
+                
                 <td>
                     <button class="btn btn-sm btn-info" data-production="${production.id}">Detail</button>
                     <button class="btn btn-sm btn-warning" data-production="${production.id}">Edit</button>
