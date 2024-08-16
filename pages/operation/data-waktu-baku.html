@@ -64,7 +64,7 @@
     </div>
 </nav>
 
-<nav id="sidebarMenu" class="sidebar d-lg-block bg-gray-800 text-white collapse" data-simplebar>
+        <nav id="sidebarMenu" class="sidebar d-lg-block bg-gray-800 text-white collapse" data-simplebar>
   <div class="sidebar-inner px-4 pt-3">
     <div id="sidebarContent"></div>
     <div class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
@@ -215,26 +215,21 @@
                                     <h2 class="fs-5 fw-bold mb-0">Input Data Master Produksi</h2>
                                 </div>
                                 <div class="col text-end">
-                                    <!-- <a href="tambah-tugas.html" class="btn btn-sm btn-primary">Tambah Tugas</a> -->
+                                    <a href="tambah-modul.html" class="btn btn-sm btn-primary">Tambah Nama Produk/Modul/Proses</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="table-responsive table-fixed">
+                        <div class="table-responsive">
                             <table class="table align-items-center table-flush">
                                 <thead class="thead-light" style="text-align: center;">
                                 <tr>
                                     <th class="border-bottom" scope="col">No</th>
-                                    <th class="border-bottom" scope="col">Nama Tahapan Proses</th>
-                                    <th class="border-bottom" scope="col">Bagian</th></th>
-                                    <th class="border-bottom" scope="col">Lead Time</th>
-                                    <th class="border-bottom" scope="col">Deskripsi</th>
-                                    <th class="border-bottom" scope="col">Start Waktu</th>
-                                    <th class="border-bottom" scope="col">Berakhir Waktu</th>
-                                    <th class="border-bottom" scope="col">Tahan Waktu</th>
-                                    <th class="border-bottom" scope="col">Waktu Berlanjut</th>
-                                    <th class="border-bottom" scope="col">Action</th>
-
-
+                                    <th class="border-bottom" scope="col">Kode Produk</th>
+                                    <th class="border-bottom" scope="col">Nama Produk</th></th>
+                                    <th class="border-bottom" scope="col">Download File</th>
+                                    <th class="border-bottom" scope="col">Monitoring Produksi dan Lead Time Produk</th>
+                                    <th class="border-bottom" scope="col">Tahapan Proses Produksi dan Lead Time</th>
+                                    <th class="border-bottom" scope="col">Waktu Baku Produksi</th>
                                 </tr>
                                 </thead>
 
@@ -253,14 +248,11 @@
         </main>
 
     <!-- Core -->
-    <script type="module" src="../../static/js/operation/sidebar.js"></script>
-
-     <!-- <script type="module" src="../../static/js/controller/sidebar.js -->
-     "></script>
+     <script type="module" src="../../static/js/operation/sidebar.js"></script>
      <script type="module" src="../../static/js/controller/logout.js"></script>
 <script src="../../vendor/@popperjs/core/dist/umd/popper.min.js"></script>
 <script src="../../vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../../static/js/operation/tahapan-produksi.js" type="module"></script>
+<script src="../../static/js/operation/data-produksi.js" type="module"></script>
 
 <!-- Vendor JS -->
 <script src="../../vendor/onscreen/dist/on-screen.umd.min.js"></script>

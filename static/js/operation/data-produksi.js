@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.btn-outline-primary').forEach(button => {
             button.addEventListener('click', event => {
                 const id = event.target.getAttribute('data-production');
-                window.location.href = `update-produksi.html?id=${id}`;
+                window.location.href = `data-waktu-baku.html?id=${id}`;
             });
         });
     
