@@ -55,3 +55,10 @@ export let UrlUsers = `${BaseUrl}/api/users`;
 
 // API PRODUCTIONS
 export let UrlProductions = `${BaseUrl}/api/productions`
+export let UrlBakuModule = `${BaseUrl}/api/modules/`
+
+export let UrlBaku = `${BaseUrl}/api/modules/production`
+
+// API PRODUCTION DETAILS
+export let UrlProductionDetails = `${BaseUrl}/api/details`;
+
