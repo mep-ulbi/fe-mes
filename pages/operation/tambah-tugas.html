@@ -168,18 +168,15 @@
                                         <input type="text" class="form-control" id="nama_produk" placeholder="Masukkan Nama Produk">
                                     </div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-md-12 mb-4">
-                                      <label for="productionFile">Upload File (Optional)</label>
-                                      <input type="file" class="form-control" id="productionFile" placeholder="Upload File Terkait Produksi">
-                                  </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
-                    <div class="d-flex justify-content-end">
+                    <div class="d-flex justify-content-start">
                         <button class="btn btn-info mt-4" type="button" onclick="window.history.back();">Kembali</button>
-                        <button id="tambahButton" class="btn btn-primary mt-4 ms-2" type="button">Tambah Input Produksi</button>
+                        <button id="startButton" class="btn btn-primary mt-4 ms-2" type="button">Mulai</button>
+                        <button id="kembaliButton" class="btn btn-primary mt-4 ms-2" type="button">Berhenti</button>
+
                     </div>
                 </div>
             </div>
@@ -188,7 +185,7 @@
 <!-- JS Core -->
 <script type="module" src="../../static/js/operation/sidebar.js"></script>
 
-<script src="../../static/js/engineering/create-produksi.js" type="module"></script>
+<!-- <script src="../../static/js/engineering/create-produksi.js" type="module"></script> -->
 <script src="../../static/js/controller/logout.js" type="module"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 

@@ -2,7 +2,7 @@ import { UrlProductionDetails,UrlBakuModule , requestOptionsGet,requestOptionsDe
 
 document.addEventListener('DOMContentLoaded', function() {
     const moduleId = getModuleIdFromURL();
-    fetchModuleDetails(moduleId, 1);  // Start with page 1
+    fetchModuleDetails(moduleId, 1);  
 
     function fetchModuleDetails(moduleId, page) {
         fetch(`${UrlBakuModule}${moduleId}?page=${page}`, requestOptionsGet)

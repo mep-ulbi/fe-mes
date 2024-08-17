@@ -97,7 +97,8 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.view-detail-proses').forEach(button => {
             button.addEventListener('click', event => {
                 const moduleId = event.target.getAttribute('data-module-id');
-                window.location.href = `view-detail-proses.html?module_id=${moduleId}`;
+                const productionId = getProductionIdFromURL();
+                window.location.href = `view-detail-proses.html?module_id=${moduleId}&productionId=${productionId}`;
             });
         });
 
@@ -126,6 +127,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     
         
+    }
+    function getProductionIdFromURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('id');
     }
     
     function deleteModule(moduleId) {
