@@ -167,6 +167,19 @@
                                         <label for="nama_produk">Nama Produk</label>
                                         <input type="text" class="form-control" id="nama_produk" placeholder="Masukkan Nama Produk">
                                     </div>
+                                    <div class="col-md-6 mb-4">
+                                      <label for="step_name">Nama Tahapan Proses</label>
+                                      <input type="text" class="form-control" id="step_name" placeholder="Masukkan Nama Tahapan Proses">
+                                  </div>
+                                  <div class="col-md-6 mb-4">
+                                    <label for="department">Nama Bagian</label>
+                                    <input type="text" class="form-control" id="department" placeholder="Masukkan Nama Bagian">
+                                </div>
+                                <div class="col-md-12 mb-4">
+                                  <label for="description">Description</label>
+                                  <textarea type="text" class="form-control" id="description" placeholder="Masukkan description"></textarea>
+                              </div>
+                                    
                                 </div>
                                 
                             </div>
@@ -175,7 +188,6 @@
                     <div class="d-flex justify-content-start">
                         <button class="btn btn-info mt-4" type="button" onclick="window.history.back();">Kembali</button>
                         <button id="startButton" class="btn btn-primary mt-4 ms-2" type="button">Mulai</button>
-                        <button id="kembaliButton" class="btn btn-primary mt-4 ms-2" type="button">Berhenti</button>
 
                     </div>
                 </div>
@@ -184,6 +196,9 @@
 
 <!-- JS Core -->
 <script type="module" src="../../static/js/operation/sidebar.js"></script>
+<script type="module" src="../../static/js/operation/detail-tugas.js"></script>
+<script type="module" src="../../static/js/operation/operation-start.js"></script>
+
 
 <!-- <script src="../../static/js/engineering/create-produksi.js" type="module"></script> -->
 <script src="../../static/js/controller/logout.js" type="module"></script>
