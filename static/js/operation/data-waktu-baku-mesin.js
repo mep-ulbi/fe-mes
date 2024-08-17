@@ -1,14 +1,14 @@
-import { UrlBaku, UrlBakuModule,requestOptionsGet,requestOptionsDelete } from "../controller/template.js";
+import { UrlBaku, UrlBakuModule, requestOptionsGet,requestOptionsDelete } from "../controller/template.js";
 
 let currentPage = 1;
 
 document.addEventListener('DOMContentLoaded', function() {
-    const productionId = getProductionIdFromURL();
-    updateHrefWithProductionId(productionId);
-    fetchModules(productionId, currentPage);
+    const machineId = getmachineIdFromURL();
+    updateHrefWithmachineId(machineId);
+    fetchModules(machineId, currentPage);
 
-    function fetchModules(productionId, page) {
-        fetch(`${UrlBaku}/${productionId}?page=${page}`, requestOptionsGet)
+    function fetchModules(machineId, page) {
+        fetch(`${UrlBaku}/${machineId}?page=${page}`, requestOptionsGet)
             .then(response => response.json())
             .then(data => {
                 updateTable(data);
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
             prevButton.textContent = 'Previous';
             prevButton.addEventListener('click', () => {
                 currentPage--;
-                fetchModules(productionId, currentPage);
+                fetchModules(machineId, currentPage);
             });
             pagination.appendChild(prevButton);
         }
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
             nextButton.textContent = 'Next';
             nextButton.addEventListener('click', () => {
                 currentPage++;
-                fetchModules(productionId, currentPage);
+                fetchModules(machineId, currentPage);
             });
             pagination.appendChild(nextButton);
         }
@@ -97,8 +97,8 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.view-detail-proses').forEach(button => {
             button.addEventListener('click', event => {
                 const moduleId = event.target.getAttribute('data-module-id');
-                const productionId = getProductionIdFromURL();
-                window.location.href = `view-detail-proses.html?module_id=${moduleId}&productionId=${productionId}`;
+                const machineId = getmachineIdFromURL();
+                window.location.href = `view-detail-proses-mesin.html?module_id=${moduleId}&machineId=${machineId}`;
             });
         });
 
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
         
     }
-    function getProductionIdFromURL() {
+    function getmachineIdFromURL() {
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get('id');
     }
@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         'Module has been deleted.',
                         'success'
                     ).then(() => {
-                        fetchModules(getProductionIdFromURL(), currentPage); // Refresh the table
+                        fetchModules(getmachineIdFromURL(), currentPage); // Refresh the table
                     });
                 })
                 .catch(error => {
@@ -170,13 +170,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    function updateHrefWithProductionId(productionId) {
+    function updateHrefWithmachineId(machineId) {
         const addButton = document.querySelector('a.btn-primary');
         if (addButton) {
-            addButton.href = `tambah-modul-produksi.html?productionId=${productionId}`;
+            addButton.href = `tambah-modul-produksi.html?machineId=${machineId}`;
         }
     }
-    function getProductionIdFromURL() {
+    function getmachineIdFromURL() {
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get('id');
     }

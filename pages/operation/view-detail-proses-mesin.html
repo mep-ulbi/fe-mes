@@ -64,7 +64,7 @@
     </div>
 </nav>
 
-  <nav id="sidebarMenu" class="sidebar d-lg-block bg-gray-800 text-white collapse" data-simplebar>
+        <nav id="sidebarMenu" class="sidebar d-lg-block bg-gray-800 text-white collapse" data-simplebar>
   <div class="sidebar-inner px-4 pt-3">
     <div id="sidebarContent"></div>
     <div class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
@@ -89,7 +89,6 @@
           </a>
       </div>
     </div>
-    <!-- Fetch Sidebar Content -->
   </div>
 </nav>
     
@@ -107,7 +106,7 @@
             <div class="media d-flex align-items-center">
               <img class="avatar rounded-circle" alt="Image placeholder" src="../../assets/img/team/profile-picture-3.jpg">
               <div class="media-body ms-2 text-dark align-items-center d-none d-lg-block">
-                <span class="mb-0 font-small fw-bold text-gray-900">Operation</span>
+                <span class="mb-0 font-small fw-bold text-gray-900">Engineering</span>
               </div>
             </div>
           </a>
@@ -155,12 +154,15 @@
 
             <div class="row">
                 <div class="col-12 mb-4">
-                    <div class="card border-0 shadow">
+                    
+                  
+                  <div class="card border-0 shadow">
                         <div class="card-header">
                             <div class="row align-items-center">
-                                <div class="col">
-                                    <h2 class="fs-5 fw-bold mb-0">Input Data Master Produksi</h2>
+                                <div class="col" style="text-align: center;">
+                                    <span>Kode dan Nama Mesin</span><h2 class="fs-5 fw-bold mb-0">Kode Mesin - Nama Mesin</h2>
                                 </div>
+                                
                             </div>
                         </div>
                         <div class="table-responsive">
@@ -168,11 +170,10 @@
                                 <thead class="thead-light" style="text-align: center;">
                                 <tr>
                                     <th class="border-bottom" scope="col">No</th>
-                                    <th class="border-bottom" scope="col">Kode Produk</th>
-                                    <th class="border-bottom" scope="col">Nama Produk</th></th>
-                                    <th class="border-bottom" scope="col">Download File</th>
-                                    <th class="border-bottom" scope="col">Tahapan Proses Produksi dan Lead Time</th>
-                                    <th class="border-bottom" scope="col">Waktu Baku Produksi</th>
+                                    <th class="border-bottom" scope="col">Nama Mesin/Modul/Proses</th>
+                                    <th class="border-bottom" scope="col">Detail Proses</th>
+                                    <th class="border-bottom" scope="col">Action</th>
+
                                 </tr>
                                 </thead>
 
@@ -191,11 +192,14 @@
         </main>
 
     <!-- Core -->
+<script type="module" src="../../static/js/operation/view-detail-proses-mesin.js"></script>
 <script type="module" src="../../static/js/operation/sidebar.js"></script>
-     <script type="module" src="../../static/js/controller/logout.js"></script>
+<script type="module" src="../../static/js/controller/logout.js"></script>
 <script src="../../vendor/@popperjs/core/dist/umd/popper.min.js"></script>
 <script src="../../vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../../static/js/operation/data-produksi.js" type="module"></script>
+<script src="../../static/js/operation/view-detail-machineId.js" type="module"></script>
+<link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
+
 
 <!-- Vendor JS -->
 <script src="../../vendor/onscreen/dist/on-screen.umd.min.js"></script>

@@ -1,4 +1,4 @@
-import { UrlProductions, requestOptionsGet, requestOptionsDelete } from "../controller/template.js";
+import { UrlMachines, requestOptionsGet, requestOptionsDelete } from "../controller/template.js";
 
 let currentPage = 1;
 
@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     fetchData(currentPage);
 
     function fetchData(page) {
-        fetch(`${UrlProductions}?page=${page}`, requestOptionsGet)
+        fetch(`${UrlMachines}?page=${page}`, requestOptionsGet)
             .then(response => response.json())
             .then(data => {
                 updateTable(data);
@@ -19,16 +19,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const tableBody = document.getElementById('tableBody');
         tableBody.innerHTML = '';
 
-        data.data.forEach((production, index) => {
+        data.data.forEach((machines, index) => {
             const row = document.createElement('tr');
             row.style.textAlign = 'center';
             row.innerHTML = `
                 <th class="text-gray-900" scope="row">${data.from + index}</th>
-                <td class="fw-bolder text-gray-500">${production.kode_produk}</td>
-                <td class="fw-bolder text-gray-500">${production.nama_produk}</td>
-                <td class="fw-bolder text-gray-500"><a href="${production.filePath}" target="_blank"><button class="btn btn-outline-info" >Download </button></a></td>
-                <td class="fw-bolder text-gray-500"><button class="btn btn-outline-warning" data-production="${production.id}">CEK DATA</button></td>
-                <td class="fw-bolder text-gray-500"><button class="btn btn-outline-primary" data-production="${production.id}">CEK DATA</button></td>
+                <td class="fw-bolder text-gray-500">${machines.kode_mesin}</td>
+                <td class="fw-bolder text-gray-500">${machines.nama_mesin}</td>
+                <td class="fw-bolder text-gray-500"><a href="${machines.filePath}" target="_blank"><button class="btn btn-outline-info" >Download </button></a></td>
+                <td class="fw-bolder text-gray-500"><button class="btn btn-outline-warning" data-machines="${machines.id}">CEK DATA</button></td>
+                <td class="fw-bolder text-gray-500"><button class="btn btn-outline-primary" data-machines="${machines.id}">CEK DATA</button></td>
                 
             `;
             tableBody.appendChild(row);
@@ -68,23 +68,23 @@ document.addEventListener('DOMContentLoaded', function() {
         // Event listener for detail buttons
         document.querySelectorAll('.btn-outline-success').forEach(button => {
             button.addEventListener('click', event => {
-                const id = event.target.getAttribute('data-production');
-                window.location.href = `detail-produksi.html?id=${id}`;
+                const id = event.target.getAttribute('data-machines');
+                window.location.href = `detail-mesin.html?id=${id}`;
             });
         });
     
         // Event listener for edit buttons
         document.querySelectorAll('.btn-outline-warning').forEach(button => {
             button.addEventListener('click', event => {
-                const id = event.target.getAttribute('data-production');
-                window.location.href = `tahapan-produksi.html?id=${id}`;
+                const id = event.target.getAttribute('data-machines');
+                window.location.href = `tahapan-mesin.html?id=${id}`;
             });
         });
     
         document.querySelectorAll('.btn-outline-primary').forEach(button => {
             button.addEventListener('click', event => {
-                const id = event.target.getAttribute('data-production');
-                window.location.href = `data-waktu-baku-produksi.html?id=${id}`;
+                const id = event.target.getAttribute('data-machines');
+                window.location.href = `data-waktu-baku-mesin.html?id=${id}`;
             });
         });
     
@@ -95,12 +95,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Function to delete a production
 function deleteProduction(id) {
-    fetch(UrlProductions + `/${id}`, requestOptionsDelete)
+    fetch(UrlMachines + `/${id}`, requestOptionsDelete)
         .then(response => response.json())
         .then(data => {
             Swal.fire({
                 title: 'Deleted!',
-                text: 'Data Produksi Berhasil Dihapus.',
+                text: 'Data Mesin Berhasil Dihapus.',
                 icon: 'success',
                 timer: 1500,
                 showConfirmButton: false
@@ -111,7 +111,7 @@ function deleteProduction(id) {
         .catch(error => {
             Swal.fire(
                 'Error!',
-                'Data Produksi Gagal Dihapus',
+                'Data Mesin Gagal Dihapus',
                 'error'
             );
         });
