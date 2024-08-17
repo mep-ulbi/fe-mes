@@ -49,6 +49,7 @@ export let UrlRegister = `${BaseUrl}/api/auth/register`;
 
 // API MACHINES
 export let UrlMachines = `${BaseUrl}/api/machines`;
+export let UrlMachineDetails = `${BaseUrl}/api/machine-details`
 
 // API USERS
 export let UrlUsers = `${BaseUrl}/api/users`;

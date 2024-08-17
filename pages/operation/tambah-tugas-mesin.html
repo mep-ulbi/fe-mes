@@ -108,7 +108,7 @@
             <div class="media d-flex align-items-center">
               <img class="avatar rounded-circle" alt="Image placeholder" src="../../assets/img/team/profile-picture-3.jpg">
               <div class="media-body ms-2 text-dark align-items-center d-none d-lg-block">
-                <span class="mb-0 font-small fw-bold text-gray-900">Engineering</span>
+                <span class="mb-0 font-small fw-bold text-gray-900">Operation</span>
               </div>
             </div>
           </a>
@@ -138,7 +138,9 @@
                             </a>
                         </li>
                         <li class="breadcrumb-item">Data Master</li>
-                        <li class="breadcrumb-item active" aria-current="page">Tambah Mesin</li>
+                        <li class="breadcrumb-item">Monitoring Mesin</li>
+                        <li class="breadcrumb-item">Tahapan Proses Mesin dan Lead Time</li>
+                        <li class="breadcrumb-item active" aria-current="page"><a>Tambah Tugas Mesin</a></li>
                     </ol>
                 </nav>
             </div> 
@@ -150,7 +152,7 @@
                         <div class="card-header">
                             <div class="row align-items-center">
                                 <div class="col">
-                                    <h2 class="fs-5 fw-bold mb-0">Tambah Input Mesin</h2>
+                                    <h2 class="fs-5 fw-bold mb-0">Tambah Tugas Mesin</h2>
                                 </div>
                             </div>
                         </div>
@@ -159,14 +161,27 @@
                                 <div class="row">
                                     <!-- Form kiri -->
                                     <div class="col-md-6 mb-4">
-                                        <label for="kode_produk">Kode Mesin</label>
-                                        <input type="text" class="form-control" id="kode_produk" placeholder="Masukkan Kode Produk">
+                                        <label for="kode_mesin">Kode Mesin</label>
+                                        <input type="text" class="form-control" id="kode_mesin" placeholder="Masukkan Kode Mesin" disabled>
                                     </div>
                                     <!-- Form kanan -->
                                     <div class="col-md-6 mb-4">
-                                        <label for="nama_produk">Nama Mesin</label>
-                                        <input type="text" class="form-control" id="nama_produk" placeholder="Masukkan Nama Produk">
+                                        <label for="nama_mesin">Nama Mesin</label>
+                                        <input type="text" class="form-control" id="nama_mesin" placeholder="Masukkan Nama Mesin" disabled>
                                     </div>
+                                    <div class="col-md-6 mb-4">
+                                      <label for="step_name">Nama Tahapan Proses</label>
+                                      <input type="text" class="form-control" id="step_name" placeholder="Masukkan Nama Tahapan Proses" disabled>
+                                  </div>
+                                  <div class="col-md-6 mb-4">
+                                    <label for="department">Nama Bagian</label>
+                                    <input type="text" class="form-control" id="department" placeholder="Masukkan Nama Bagian" disabled>
+                                </div>
+                                <div class="col-md-12 mb-4">
+                                  <label for="description">Description</label>
+                                  <textarea type="text" class="form-control" id="description" placeholder="Masukkan description"></textarea>
+                              </div>
+                                    
                                 </div>
                                 
                             </div>
@@ -175,7 +190,6 @@
                     <div class="d-flex justify-content-start">
                         <button class="btn btn-info mt-4" type="button" onclick="window.history.back();">Kembali</button>
                         <button id="startButton" class="btn btn-primary mt-4 ms-2" type="button">Mulai</button>
-                        <button id="kembaliButton" class="btn btn-primary mt-4 ms-2" type="button">Berhenti</button>
 
                     </div>
                 </div>
@@ -184,8 +198,8 @@
 
 <!-- JS Core -->
 <script type="module" src="../../static/js/operation/sidebar.js"></script>
-
-<!-- <script src="../../static/js/engineering/create-produksi.js" type="module"></script> -->
+<script type="module" src="../../static/js/operation/detail-tugas-mesin.js"></script>
+<script type="module" src="../../static/js/operation/operation-start-mesin.js"></script>
 <script src="../../static/js/controller/logout.js" type="module"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 

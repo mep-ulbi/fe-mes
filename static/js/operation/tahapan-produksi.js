@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
             button.addEventListener('click', event => {
                 const productionId = event.target.getAttribute('data-production');
                 const stepId = event.target.getAttribute('data-steps');
-                window.location.href = `lanjutkan-tugas.html?productionId=${productionId}&stepId=${stepId}`;
+                window.location.href = `lanjutkan-tugas-produksi.html?productionId=${productionId}&stepId=${stepId}`;
             });
         });
     }

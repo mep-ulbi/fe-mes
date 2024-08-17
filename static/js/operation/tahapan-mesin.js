@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
             button.addEventListener('click', event => {
                 const machineId = event.target.getAttribute('data-machine');
                 const stepId = event.target.getAttribute('data-steps');
-                window.location.href = `lanjutkan-tugas.html?machineId=${machineId}&stepId=${stepId}`;
+                window.location.href = `lanjutkan-tugas-mesin.html?machineId=${machineId}&stepId=${stepId}`;
             });
         });
     }
