@@ -31,9 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <td class="fw-bolder text-gray-500">
                     <button class="btn btn-outline-primary tambah-detail-proses" data-module-id="${module.id}">Tambah Detail Proses</button>
                     <button class="btn btn-outline-primary view-detail-proses" data-module-id="${module.id}">View Detail Proses</button>
-                   
                 </td>
-
                <td class="fw-bolder text-gray-500">
                     <button class="btn btn-outline-warning edit-module" data-module-id="${module.id}">
                         <i class="mdi mdi-pencil"></i> Edit

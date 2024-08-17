@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         titleElement.textContent = `${data.kode_mesin} - ${data.nama_mesin}`;
     }
 
-    function getmachineIdFromURL() {
+    function getMachineIdFromURL() {
         const params = new URLSearchParams(window.location.search);
         return params.get('machineId') ; // Default to 1 if no id is in the URL
     }

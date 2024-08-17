@@ -4,7 +4,7 @@
 <head> 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- Primary Meta Tags -->
-<title>MES | Engineering</title>
+<title>MES | Manager</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="title" content="MES">
 <meta name="author" content="Themesberg">
@@ -67,6 +67,7 @@
         <nav id="sidebarMenu" class="sidebar d-lg-block bg-gray-800 text-white collapse" data-simplebar>
   <div class="sidebar-inner px-4 pt-3">
     <div id="sidebarContent"></div>
+
     <div class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
       <div class="d-flex align-items-center">
         <div class="avatar-lg me-4">
@@ -74,10 +75,10 @@
             alt="Bonnie Green">
         </div>
         <div class="d-block">
-          <h2 class="h5 mb-3">Hi, Jane</h2>
-          <a href="../../pages/examples/sign-in.html" class="btn btn-secondary btn-sm d-inline-flex align-items-center">
+          <h2 class="h5 mb-3">Operation</h2>
+          <a class="btn btn-secondary btn-sm d-inline-flex align-items-center logoutButton">
             <svg class="icon icon-xxs me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>            
-            Sign Out
+            Logout
           </a>
         </div>
       </div>
@@ -89,6 +90,10 @@
           </a>
       </div>
     </div>
+    
+        </div>
+      </li>
+    </ul>
   </div>
 </nav>
     
@@ -106,7 +111,7 @@
             <div class="media d-flex align-items-center">
               <img class="avatar rounded-circle" alt="Image placeholder" src="../../assets/img/team/profile-picture-3.jpg">
               <div class="media-body ms-2 text-dark align-items-center d-none d-lg-block">
-                <span class="mb-0 font-small fw-bold text-gray-900">Engineering</span>
+                <span class="mb-0 font-small fw-bold text-gray-900">Operation</span>
               </div>
             </div>
           </a>
@@ -116,7 +121,7 @@
               My Profile
             </a>
             <div role="separator" class="dropdown-divider my-1"></div>
-            <a class="dropdown-item d-flex align-items-center logoutButton"  href="#" >
+            <a class="dropdown-item d-flex align-items-center logoutButton">
               <svg class="dropdown-icon text-danger me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>                
               Logout
             </a>
@@ -126,67 +131,117 @@
     </div>
   </div>
 </nav>
+            <!-- Content Start -->
             <div class="py-4">
-                <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
-                    <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
-                        <li class="breadcrumb-item">
-                            <a href="../engineering/dashboard.html">
-                                <svg class="icon icon-xxs" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
-                            </a>
-                        </li>
-                        <li class="breadcrumb-item">Data Master</li>
-                        <li class="breadcrumb-item">Data Waktu Baku</li>
-                        <li class="breadcrumb-item active" aria-current="page"><a>View Detail Proses</a></li>
-                    </ol>
-                </nav>
+              <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
+                  <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
+                      <li class="breadcrumb-item">
+                          <a href="dashboard.html">
+                              <svg class="icon icon-xxs" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                          </a>
+                      </li>
+                      <li class="breadcrumb-item">Data Master</li>
+                      <li class="breadcrumb-item">Data Waktu Baku</li>
+                      <li class="breadcrumb-item active" aria-current="page"><a>Edit Detail Proses</a></li>
+                  </ol>
+              </nav>
             </div>
 
+          <!-- Input Form Start -->
             <div class="row">
                 <div class="col-12 mb-4">
-                  <div class="card border-0 shadow">
+                    <div class="card border-0 shadow components-section">
                         <div class="card-header">
                             <div class="row align-items-center">
-                                <div class="col" style="text-align: center;">
-                                    <span>Kode dan Nama Mesin</span><h2 class="fs-5 fw-bold mb-0">Kode Mesin - Nama Mesin</h2>
+                                <div class="col">
+                                    <h2 class="fs-5 fw-bold mb-0">Tambah Data</h2>
                                 </div>
-                                
                             </div>
                         </div>
-                        <div class="table-responsive">
-                            <table class="table align-items-center table-flush">
-                                <thead class="thead-light" style="text-align: center;">
-                                <tr>
-                                    <th class="border-bottom" scope="col">No</th>
-                                    <th class="border-bottom" scope="col">Nama Mesin/Modul/Proses</th>
-                                    <th class="border-bottom" scope="col">Detail Proses</th>
-                                    <th class="border-bottom" scope="col">Action</th>
+                        <div class="card-body">     
+                                <div class="row">
+                                    <div class="col-md-12 mb-4">
+                                        <label for="nama_proses">Detail Proses</label>
+                                        <input type="text" class="form-control" id="nama_proses" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-12 mb-4">
+                                        <label for="waktu_m">Waktu (Menit)</label>
+                                        <input type="number" class="form-control" id="waktu_m" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-12 mb-4">
+                                        <label for="output_per_unit">Output per Unit</label>
+                                        <input type="number" class="form-control" id="output_per_unit" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-12 mb-4">
+                                        <label for="jumlah_kebutuhan_per_unit">Jumlah Kebutuhan per Unit</label>
+                                        <input type="number" class="form-control" id="jumlah_kebutuhan_per_unit" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-12 mb-4">
+                                        <label for="process_type">Tipe Proses</label>
+                                        <select class="form-control" id="process_type" required>
+                                            <option value="ASSY MH">ASSY MH</option>
+                                            <option value="ASSY MCH">ASSY MCH</option>
+                                            <option value="TESTING MH">TESTING MH</option>
+                                            <option value="Tidak-ada">Tidak Ada</option>
 
-                                </tr>
-                                </thead>
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-12 mb-4">
+                                        <label for="utilisasi_mesin">Utilisasi Mesin</label>
+                                        <select class="form-control" id="utilisasi_mesin" required>
+                                            <option value="SMT (sistem)">SMT (sistem)</option>
+                                            <option value="Wave Solder">Wave Solder</option>
+                                            <option value="Mesin Coating">Mesin Coating</option>
+                                            <option value="Mesin Cutting">Mesin Cutting</option>
+                                            <option value="Mesin Bending">Mesin Bending</option>
+                                            <option value="Mesin Cut Din Rail">Mesin Cut Din Rail</option>
+                                            <option value="Mesin Cut Duct Cable">Mesin Cut Duct Cable</option>
+                                            <option value="Mesin BOR">Mesin BOR</option>
+                                            <option value="Mesin Gerinda">Mesin Gerinda</option>
+                                            <option value="Wire Processor">Wire Processor</option>
+                                            <option value="Tidak-ada">Tidak Ada</option>
 
-                                <!-- Fetch Data Start -->
-                                <tbody id="tableBody"></tbody>
-
-                                <!-- Fetch Data End -->
-
-                            </table>
-                            <div style="margin-right: 2%;" id="pagination" class="d-flex justify-content-end mb-4 "></div>                              
-
+                                        </select>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="d-flex justify-content-end">
+                                  <button class="btn btn-info mt-4" type="button" onclick="window.history.back();">Kembali</button>
+                                  <button id="updateButton" class="btn btn-primary mt-4 ms-2" type="button">Ubah Detail Proses</button>
+                              </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </main>
 
-    <!-- Core -->
-<script type="module" src="../../static/js/operation/view-detail-proses-mesin.js"></script>
+<!-- JS Core -->
 <script type="module" src="../../static/js/operation/sidebar.js"></script>
-<script type="module" src="../../static/js/controller/logout.js"></script>
+<script type="module" src="../../static/js/operation/edit-detail-proses-mesin.js"></script>
+
+<script src="../../static/js/controller/logout.js" type="module"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- Core -->
 <script src="../../vendor/@popperjs/core/dist/umd/popper.min.js"></script>
 <script src="../../vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../../static/js/operation/view-detail-machineId.js" type="module"></script>
-<link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
-
 
 <!-- Vendor JS -->
 <script src="../../vendor/onscreen/dist/on-screen.umd.min.js"></script>
