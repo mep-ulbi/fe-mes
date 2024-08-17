@@ -4,7 +4,7 @@
 <head> 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- Primary Meta Tags -->
-<title>MES | Manager</title>
+<title>MES | Engineering</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="title" content="MES">
 <meta name="author" content="Themesberg">
@@ -67,7 +67,6 @@
         <nav id="sidebarMenu" class="sidebar d-lg-block bg-gray-800 text-white collapse" data-simplebar>
   <div class="sidebar-inner px-4 pt-3">
     <div id="sidebarContent"></div>
-
     <div class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
       <div class="d-flex align-items-center">
         <div class="avatar-lg me-4">
@@ -76,9 +75,9 @@
         </div>
         <div class="d-block">
           <h2 class="h5 mb-3">Hi, Jane</h2>
-          <a class="btn btn-secondary btn-sm d-inline-flex align-items-center logoutButton">
+          <a href="../../pages/examples/sign-in.html" class="btn btn-secondary btn-sm d-inline-flex align-items-center">
             <svg class="icon icon-xxs me-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>            
-            Logout
+            Sign Out
           </a>
         </div>
       </div>
@@ -90,10 +89,60 @@
           </a>
       </div>
     </div>
-    
+    <!-- <ul class="nav flex-column pt-3 pt-md-0">
+      <li class="nav-item">
+        <a href="../../index.html" class="nav-link d-flex align-items-center">
+          <span class="sidebar-icon">
+            <img src="../../assets/img/favicon/logo-mes.png" height="60" width="60" alt="Volt Logo">
+          </span>
+          <span class="mt-1 ms-1 sidebar-text"><b>MES</b></span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="../../pages/engineering/dashboard.html" class="nav-link">
+          <span class="sidebar-icon">
+            <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
+          </span> 
+          <span class="sidebar-text">Dashboard</span>
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <span
+          class="nav-link  collapsed  d-flex justify-content-between align-items-center"
+          data-bs-toggle="collapse" data-bs-target="#submenu-app">
+          <span>
+            <span class="sidebar-icon">
+              <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5 4a3 3 0 00-3 3v6a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H5zm-1 9v-1h5v2H5a1 1 0 01-1-1zm7 1h4a1 1 0 001-1v-1h-5v2zm0-4h5V8h-5v2zM9 8H4v2h5V8z" clip-rule="evenodd"></path></svg>
+            </span> 
+            <span class="sidebar-text">Data Master</span>
+          </span>
+          <span class="link-arrow">
+            <svg class="icon icon-sm" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
+          </span>
+        </span>
+        <div class="multi-level collapse "
+          role="list" id="submenu-app" aria-expanded="false">
+          <ul class="flex-column nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="../../pages/engineering/data-produksi.html">
+                <span class="sidebar-text">Input Produksi</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="multi-level collapse "
+          role="list" id="submenu-app" aria-expanded="false">
+          <ul class="flex-column nav">
+            <li class="nav-item ">
+              <a class="nav-link" href="../../pages/engineering/data-mesin.html">
+                <span class="sidebar-text">Input Mesin</span>
+              </a>
+            </li>
+          </ul>
         </div>
       </li>
-    </ul>
+    </ul> -->
   </div>
 </nav>
     
@@ -111,7 +160,7 @@
             <div class="media d-flex align-items-center">
               <img class="avatar rounded-circle" alt="Image placeholder" src="../../assets/img/team/profile-picture-3.jpg">
               <div class="media-body ms-2 text-dark align-items-center d-none d-lg-block">
-                <span class="mb-0 font-small fw-bold text-gray-900">Operation</span>
+                <span class="mb-0 font-small fw-bold text-gray-900">Engineering</span>
               </div>
             </div>
           </a>
@@ -121,7 +170,7 @@
               My Profile
             </a>
             <div role="separator" class="dropdown-divider my-1"></div>
-            <a class="dropdown-item d-flex align-items-center logoutButton">
+            <a class="dropdown-item d-flex align-items-center logoutButton"  href="#" >
               <svg class="dropdown-icon text-danger me-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>                
               Logout
             </a>
@@ -131,118 +180,82 @@
     </div>
   </div>
 </nav>
-            <!-- Content Start -->
             <div class="py-4">
-              <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
-                  <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
-                      <li class="breadcrumb-item">
-                          <a href="dashboard.html">
-                              <svg class="icon icon-xxs" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
-                          </a>
-                      </li>
-                      <li class="breadcrumb-item">Monitoring</li>
-                      <li class="breadcrumb-item active" aria-current="page">Tambah Proses Produksi</li>
-                  </ol>
-              </nav>
+                <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
+                    <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
+                        <li class="breadcrumb-item">
+                            <a href="../engineering/dashboard.html">
+                                <svg class="icon icon-xxs" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item">Data Master</li>
+                        <li class="breadcrumb-item active" aria-current="page"><a href="../engineering/input-produksi.html">Input Produksi</a></li>
+                    </ol>
+                </nav>
             </div>
 
-          <!-- Input Form Start -->
-            <div class="row">
-                <div class="col-12 mb-4">
-                    <div class="card border-0 shadow components-section">
-                        <div class="card-header">
-                            <div class="row align-items-center">
-                                <div class="col">
-                                    <h2 class="fs-5 fw-bold mb-0">Tambah Proses Produksi</h2>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body">     
-                            <div class="row">
-                                <div class="row">
-                                    <!-- Form kiri -->
-                                    <div class="col-md-6 mb-4">
-                                        <label for="operator">Operator</label>
-                                        <input type="text" class="form-control" id="operator" disabled>
-                                    </div>
-                                    <!-- Form kanan -->
-                                    <div class="col-md-6 mb-4">
-                                        <label for="bagian">Bagian</label>
-                                        <input type="text" class="form-control" id="bagian" disabled>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div class="row mt-1 mb-4">
+                <div class="col-md-3">
+                    <label for="ppic">PPIC</label>
+                    <input type="text" class="form-control" id="ppic" placeholder="Cari Nama PPIC">
+                </div>
+                <div class="col-md-9 d-flex justify-content-end">
+                    <div class="col-md-3 mt-4">
+                        <input type="text" class="form-control" id="exampleInputIconLeft" placeholder="Search" aria-label="Search">
                     </div>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-12 mb-4">
-                    <div class="card border-0 shadow components-section">
-                        <div class="card-body">     
-                            <div class="row mb-4">
-                                <div class="row">
-                                    <!-- Form kiri -->
-                                    <div class="col-md-4 mb-4">
-                                        <label for="no">Nomor Proses Produksi</label>
-                                        <select class="form-select" id="no" aria-label="Default select example">
-                                            <option selected>Pilih Nomor</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                        </select>
-                                    </div>
-                                    <!-- Form kanan -->
-                                    <div class="col-md-4 mb-4">
-                                        <label for="role">Kode Produk</label>
-                                        <input type="text" class="form-control" id="kode_produk" readonly>
-                                    </div>
-                                    <div class="col-md-4 mb-4">
-                                        <label for="role">Nama Produk</label>
-                                        <input type="text" class="form-control" id="nama_produk" readonly>
-                                    </div>
+                    
+                  
+                  <div class="card border-0 shadow">
+                        <div class="card-header">
+                            <div class="row align-items-center">
+                                <div class="col" style="text-align: center;">
+                                    <span>Kode dan Nama Produk</span><h2 class="fs-5 fw-bold mb-0">Kode Produk - Nama Produksi</h2>
                                 </div>
-                                <div class="row">
-                                    <!-- Form kiri -->
-                                    <div class="col-md-6 mb-4">
-                                        <label for="tahapan_proses">Tahapan Proses Produksi</label>
-                                        <select class="form-select" id="tahapan_proses" aria-label="Default select example">
-                                            <option selected>Pilih Nomor</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                        </select>
-                                    </div>
-                                    <!-- Form kanan -->
-                                    <div class="col-md-6 mb-4">
-                                        <label for="nama_modul">Nama Proses/Modul</label>
-                                        <input type="text" class="form-control" id="nama_modul" readonly>
-                                    </div>
-                                    <div class="col-md-12 mb-4">
-                                        <label for="detail_proses">Detail Proses</label>
-                                        <input type="text" class="form-control" id="detail_proses" readonly>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
-                    </div>
-                    <div class="d-flex justify-content-end">
-                        <button class="btn btn-info mt-4" type="button" onclick="window.history.back();">Kembali</button>
-                        <button id="tambahButton" class="btn btn-primary mt-4 ms-2" type="button">Tambah Task</button>
+                        <div class="table-responsive">
+                            <table class="table align-items-center table-flush">
+                                <thead class="thead-light" style="text-align: center;">
+                                <tr>
+                                    <th class="border-bottom" scope="col">No</th>
+                                    <th class="border-bottom" scope="col">Nama Produk/Modul/Proses</th>
+                                    <th class="border-bottom" scope="col">Detail Proses</th>
+                                    <th class="border-bottom" scope="col">Action</th>
+
+                                </tr>
+                                </thead>
+
+                                <!-- Fetch Data Start -->
+                                <tbody id="tableBody"></tbody>
+
+                                <!-- Fetch Data End -->
+
+                            </table>
+                            <div style="margin-right: 2%;" id="pagination" class="d-flex justify-content-end mb-4 "></div>                              
+
+                        </div>
                     </div>
                 </div>
             </div>
         </main>
 
-<!-- JS Core -->
-<script type="module" src="../../static/js/operation/sidebar.js"></script>
+    <!-- Core -->
+    <script type="module" src="../../static/js/operation/view-detail-proses.js"></script>
 
-<script src="../../static/js/controller/logout.js" type="module"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+     <script type="module" src="../../static/js/operation/sidebar.js"></script>
 
-<!-- Core -->
+     <script type="module" src="../../static/js/controller/logout.js"></script>
 <script src="../../vendor/@popperjs/core/dist/umd/popper.min.js"></script>
 <script src="../../vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../../static/js/operation/view-detail-productionId.js" type="module"></script>
+<link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
+
 
 <!-- Vendor JS -->
 <script src="../../vendor/onscreen/dist/on-screen.umd.min.js"></script>

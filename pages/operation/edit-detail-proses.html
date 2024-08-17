@@ -91,6 +91,9 @@
       </div>
     </div>
     
+        </div>
+      </li>
+    </ul>
   </div>
 </nav>
     
@@ -104,16 +107,16 @@
       <!-- Navbar links -->
       <ul class="navbar-nav align-items-center">
         <li class="nav-item dropdown ms-lg-3">
-          <a class="nav-link dropdown-toggle pt-1 px-0" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle pt-1 px-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <div class="media d-flex align-items-center">
               <img class="avatar rounded-circle" alt="Image placeholder" src="../../assets/img/team/profile-picture-3.jpg">
               <div class="media-body ms-2 text-dark align-items-center d-none d-lg-block">
-                <span class="mb-0 font-small fw-bold text-gray-900">Engineering</span>
+                <span class="mb-0 font-small fw-bold text-gray-900">Operation</span>
               </div>
             </div>
           </a>
           <div class="dropdown-menu dashboard-dropdown dropdown-menu-end mt-2 py-1">
-            <a class="dropdown-item d-flex align-items-center">
+            <a class="dropdown-item d-flex align-items-center" href="#">
               <svg class="dropdown-icon text-gray-400 me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path></svg>
               My Profile
             </a>
@@ -130,62 +133,108 @@
 </nav>
             <!-- Content Start -->
             <div class="py-4">
-                <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
-                    <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
-                        <li class="breadcrumb-item">
-                            <a href="dashboard.html">
-                                <svg class="icon icon-xxs" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
-                            </a>
-                        </li>
-                        <li class="breadcrumb-item">Data Master</li>
-                        <li class="breadcrumb-item active" aria-current="page">Tambah Produksi</li>
-                    </ol>
-                </nav>
-            </div> 
+              <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
+                  <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
+                      <li class="breadcrumb-item">
+                          <a href="dashboard.html">
+                              <svg class="icon icon-xxs" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                          </a>
+                      </li>
+                      <li class="breadcrumb-item">Monitoring</li>
+                      <li class="breadcrumb-item active" aria-current="page">Tambah Nama Produk / Modul / Proses</li>
+                  </ol>
+              </nav>
+            </div>
 
-            <!-- Input Form -->
+          <!-- Input Form Start -->
             <div class="row">
                 <div class="col-12 mb-4">
                     <div class="card border-0 shadow components-section">
                         <div class="card-header">
                             <div class="row align-items-center">
                                 <div class="col">
-                                    <h2 class="fs-5 fw-bold mb-0">Tambah Input Produksi</h2>
+                                    <h2 class="fs-5 fw-bold mb-0">Tambah Data</h2>
                                 </div>
                             </div>
                         </div>
                         <div class="card-body">     
-                            <div class="row mb-4">
                                 <div class="row">
-                                    <!-- Form kiri -->
-                                    <div class="col-md-6 mb-4">
-                                        <label for="kode_produk">Kode Produk</label>
-                                        <input type="text" class="form-control" id="kode_produk" placeholder="Masukkan Kode Produk">
-                                    </div>
-                                    <!-- Form kanan -->
-                                    <div class="col-md-6 mb-4">
-                                        <label for="nama_produk">Nama Produk</label>
-                                        <input type="text" class="form-control" id="nama_produk" placeholder="Masukkan Nama Produk">
+                                    <div class="col-md-12 mb-4">
+                                        <label for="nama_proses">Detail Proses</label>
+                                        <input type="text" class="form-control" id="nama_proses" required>
                                     </div>
                                 </div>
                                 
+                                <div class="row">
+                                    <div class="col-md-12 mb-4">
+                                        <label for="waktu_m">Waktu (Menit)</label>
+                                        <input type="number" class="form-control" id="waktu_m" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-12 mb-4">
+                                        <label for="output_per_unit">Output per Unit</label>
+                                        <input type="number" class="form-control" id="output_per_unit" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-12 mb-4">
+                                        <label for="jumlah_kebutuhan_per_unit">Jumlah Kebutuhan per Unit</label>
+                                        <input type="number" class="form-control" id="jumlah_kebutuhan_per_unit" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-12 mb-4">
+                                        <label for="process_type">Tipe Proses</label>
+                                        <select class="form-control" id="process_type" required>
+                                            <option value="ASSY MH">ASSY MH</option>
+                                            <option value="ASSY MCH">ASSY MCH</option>
+                                            <option value="TESTING MH">TESTING MH</option>
+                                            <option value="Tidak-ada">Tidak Ada</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-12 mb-4">
+                                        <label for="utilisasi_mesin">Utilisasi Mesin</label>
+                                        <select class="form-control" id="utilisasi_mesin" required>
+                                            <option value="SMT (sistem)">SMT (sistem)</option>
+                                            <option value="Wave Solder">Wave Solder</option>
+                                            <option value="Mesin Coating">Mesin Coating</option>
+                                            <option value="Mesin Cutting">Mesin Cutting</option>
+                                            <option value="Mesin Bending">Mesin Bending</option>
+                                            <option value="Mesin Cut Din Rail">Mesin Cut Din Rail</option>
+                                            <option value="Mesin Cut Duct Cable">Mesin Cut Duct Cable</option>
+                                            <option value="Mesin BOR">Mesin BOR</option>
+                                            <option value="Mesin Gerinda">Mesin Gerinda</option>
+                                            <option value="Wire Processor">Wire Processor</option>
+                                            <option value="Tidak-ada">Tidak Ada</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="d-flex justify-content-end">
+                                  <button class="btn btn-info mt-4" type="button" onclick="window.history.back();">Kembali</button>
+                                  <button id="updateButton" class="btn btn-primary mt-4 ms-2" type="button">Ubah Detail Proses</button>
+                              </div>
                             </div>
                         </div>
                     </div>
-                    <div class="d-flex justify-content-start">
-                        <button class="btn btn-info mt-4" type="button" onclick="window.history.back();">Kembali</button>
-                        <button id="startButton" class="btn btn-primary mt-4 ms-2" type="button">Mulai</button>
-                        <button id="kembaliButton" class="btn btn-primary mt-4 ms-2" type="button">Berhenti</button>
-
-                    </div>
                 </div>
             </div>
+            
         </main>
 
 <!-- JS Core -->
 <script type="module" src="../../static/js/operation/sidebar.js"></script>
+<script type="module" src="../../static/js/operation/edit-details-process.js"></script>
 
-<!-- <script src="../../static/js/engineering/create-produksi.js" type="module"></script> -->
 <script src="../../static/js/controller/logout.js" type="module"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 

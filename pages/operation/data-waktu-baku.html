@@ -189,7 +189,7 @@
                             </a>
                         </li>
                         <li class="breadcrumb-item">Data Master</li>
-                        <li class="breadcrumb-item active" aria-current="page"><a href="../engineering/input-produksi.html">Input Produksi</a></li>
+                        <li class="breadcrumb-item active" aria-current="page"><a href="../operation/data-waktu-baku.html">Data Waktu Baku</a></li>
                     </ol>
                 </nav>
             </div>
@@ -208,14 +208,16 @@
 
             <div class="row">
                 <div class="col-12 mb-4">
-                    <div class="card border-0 shadow">
+                    
+                  
+                  <div class="card border-0 shadow">
                         <div class="card-header">
                             <div class="row align-items-center">
                                 <div class="col">
-                                    <h2 class="fs-5 fw-bold mb-0">Input Data Master Produksi</h2>
+                                    <span>Kode dan Nama Produk</span><h2 class="fs-5 fw-bold mb-0">Kode Produk - Nama Produksi</h2>
                                 </div>
                                 <div class="col text-end">
-                                    <a href="tambah-modul.html" class="btn btn-sm btn-primary">Tambah Nama Produk/Modul/Proses</a>
+                                    <a href="tambah-modul-produksi.html" class="btn btn-sm btn-primary">Tambah Nama Produk/Modul/Proses</a>
                                 </div>
                             </div>
                         </div>
@@ -224,12 +226,11 @@
                                 <thead class="thead-light" style="text-align: center;">
                                 <tr>
                                     <th class="border-bottom" scope="col">No</th>
-                                    <th class="border-bottom" scope="col">Kode Produk</th>
-                                    <th class="border-bottom" scope="col">Nama Produk</th></th>
-                                    <th class="border-bottom" scope="col">Download File</th>
-                                    <th class="border-bottom" scope="col">Monitoring Produksi dan Lead Time Produk</th>
-                                    <th class="border-bottom" scope="col">Tahapan Proses Produksi dan Lead Time</th>
-                                    <th class="border-bottom" scope="col">Waktu Baku Produksi</th>
+                                    <th class="border-bottom" scope="col">Nama Produk/Modul/Proses</th>
+                                    <th class="border-bottom" scope="col">Detail Proses</th>
+                                    <th class="border-bottom" scope="col">Action</th>
+
+
                                 </tr>
                                 </thead>
 
@@ -252,9 +253,14 @@
      <script type="module" src="../../static/js/controller/logout.js"></script>
 <script src="../../vendor/@popperjs/core/dist/umd/popper.min.js"></script>
 <script src="../../vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../../static/js/operation/data-produksi.js" type="module"></script>
+
+<script src="../../static/js/operation/data-waktu-baku.js" type="module"></script>
+<script src="../../static/js/operation/production-byid.js" type="module"></script>
+
 
 <!-- Vendor JS -->
+<link href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css" rel="stylesheet">
+
 <script src="../../vendor/onscreen/dist/on-screen.umd.min.js"></script>
 
 <!-- Slider -->
