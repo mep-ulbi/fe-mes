@@ -62,3 +62,4 @@ export let UrlBaku = `${BaseUrl}/api/modules/production`
 // API PRODUCTION DETAILS
 export let UrlProductionDetails = `${BaseUrl}/api/details`;
 
+export let UrlProductionSteps = `${BaseUrl}/api/production`;
