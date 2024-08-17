@@ -49,16 +49,15 @@ export let UrlRegister = `${BaseUrl}/api/auth/register`;
 
 // API MACHINES
 export let UrlMachines = `${BaseUrl}/api/machines`;
+export let UrlMachineDetails = `${BaseUrl}/api/details`;
 
 // API USERS
 export let UrlUsers = `${BaseUrl}/api/users`;
 
 // API PRODUCTIONS
-export let UrlProductions = `${BaseUrl}/api/productions`
-export let UrlBakuModule = `${BaseUrl}/api/modules/`
-
-export let UrlBaku = `${BaseUrl}/api/modules/production`
-
-// API PRODUCTION DETAILS
+export let UrlProductions = `${BaseUrl}/api/productions`;
 export let UrlProductionDetails = `${BaseUrl}/api/details`;
 
+// API BAKU
+export let UrlBakuModule = `${BaseUrl}/api/modules/`;
+export let UrlBaku = `${BaseUrl}/api/modules/production`;

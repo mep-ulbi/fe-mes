@@ -1,4 +1,4 @@
-import { UrlProductionDetails,UrlBakuModule , requestOptionsGet,requestOptionsDelete } from "../controller/template.js";
+import { UrlProductionDetails, UrlBakuModule , requestOptionsGet,requestOptionsDelete } from "../controller/template.js";
 
 document.addEventListener('DOMContentLoaded', function() {
     const moduleId = getModuleIdFromURL();
