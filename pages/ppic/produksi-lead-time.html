@@ -66,7 +66,6 @@
 
   <nav id="sidebarMenu" class="sidebar d-lg-block bg-gray-800 text-white collapse" data-simplebar>
   <div class="sidebar-inner px-4 pt-3">
-    <div id="sidebarContent"></div>
     <div class="user-card d-flex d-md-none align-items-center justify-content-between justify-content-md-center pb-4">
       <div class="d-flex align-items-center">
         <div class="avatar-lg me-4">
@@ -89,7 +88,42 @@
           </a>
       </div>
     </div>
-    <!-- Fetch Sidebar Content -->
+    <ul class="nav flex-column pt-3 pt-md-0">
+      <li class="nav-item">
+        <a href="../../index.html" class="nav-link d-flex align-items-center">
+          <span class="sidebar-icon">
+            <img src="../../assets/img/favicon/logo-mes.png" height="60" width="60" alt="Volt Logo">
+          </span>
+          <span class="mt-1 ms-1 sidebar-text"><b>MES</b></span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="../ppic/dashboard.html" class="nav-link">
+          <span class="sidebar-icon">
+            <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
+          </span> 
+          <span class="sidebar-text">Dashboard</span>
+        </a>
+      </li>
+      
+      <li class="nav-item">
+        <a href="../ppic/data-user.html" class="nav-link">
+          <span class="sidebar-icon">
+            <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path></svg>
+          </span>
+          <span class="sidebar-text">Data Users</span>
+        </a>
+      </li>
+      
+      <li class="nav-item active">
+        <a href="../ppic/produksi-lead-time.html" class="nav-link">
+          <span class="sidebar-icon">
+            <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"></path></svg>
+          </span>
+          <span class="sidebar-text">Produksi Lead Time</span>
+        </a>
+      </li>
+    </ul>
   </div>
 </nav>
     
@@ -139,18 +173,6 @@
                         <li class="breadcrumb-item active" aria-current="page"><a href="../engineering/input-produksi.html">Input Produksi</a></li>
                     </ol>
                 </nav>
-            </div>
-
-            <div class="row mt-1 mb-4">
-                <div class="col-md-3">
-                    <label for="ppic">PPIC</label>
-                    <input type="text" class="form-control" id="ppic" placeholder="Cari Nama PPIC">
-                </div>
-                <div class="col-md-9 d-flex justify-content-end">
-                    <div class="col-md-3 mt-4">
-                        <input type="text" class="form-control" id="exampleInputIconLeft" placeholder="Search" aria-label="Search">
-                    </div>
-                </div>
             </div>
 
             <div class="row">
