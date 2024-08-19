@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 icon: 'success',
                 confirmButtonText: 'OK'
             }).then(() => {
-                window.history.back(); // Go back to the previous page after updating
+                window.location.href = `tahapan-mesin.html?id=${machineId}`;
             });
         })
         .catch(error => {
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 icon: 'success',
                 confirmButtonText: 'OK'
             }).then(() => {
-                window.history.back();
+                window.location.href = `tahapan-mesin.html?id=${machineId}`;
             });
         })
         .catch(error => {
