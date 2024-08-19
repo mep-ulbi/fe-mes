@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 icon: 'success',
                 confirmButtonText: 'OK'
             }).then(() => {
-                window.history.back(); // Go back to the previous page after updating
+                window.location.href = `tahapan-produksi.html?id=${productionId}`; // Go back to the previous page after updating
             });
         })
         .catch(error => {
