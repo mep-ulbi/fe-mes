@@ -1,4 +1,4 @@
-import { UrlBaku, UrlBakuModule, requestOptionsGet,requestOptionsDelete } from "../controller/template.js";
+import { UrlBakuMachines, UrlBakuModule, requestOptionsGet,requestOptionsDelete } from "../controller/template.js";
 
 let currentPage = 1;
 
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     fetchModules(machineId, currentPage);
 
     function fetchModules(machineId, page) {
-        fetch(`${UrlBaku}/${machineId}?page=${page}`, requestOptionsGet)
+        fetch(`${UrlBakuMachines}/${machineId}?page=${page}`, requestOptionsGet)
             .then(response => response.json())
             .then(data => {
                 updateTable(data);

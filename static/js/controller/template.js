@@ -58,6 +58,7 @@ export let UrlUsers = `${BaseUrl}/api/users`;
 export let UrlProductions = `${BaseUrl}/api/productions`
 export let UrlBakuModule = `${BaseUrl}/api/modules/`
 export let UrlBaku = `${BaseUrl}/api/modules/production`
+export let UrlBakuMachines = `${BaseUrl}/api/machine-modules`
 
 // API PRODUCTION DETAILS
 export let UrlProductionDetails = `${BaseUrl}/api/details`;
