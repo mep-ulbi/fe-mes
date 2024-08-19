@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     fetchModuleDetails(moduleId, 1);  
 
     function fetchModuleDetails(moduleId, page) {
-        fetch(`${UrlBakuModule}/${moduleId}?page=${page}`, requestOptionsGet)
+        fetch(`${UrlBakuModule}${moduleId}?page=${page}`, requestOptionsGet)
             .then(response => response.json())
             .then(data => {
                 updateTable(data.module, data.details_pagination.from);
