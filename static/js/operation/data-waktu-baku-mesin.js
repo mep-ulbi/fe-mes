@@ -1,14 +1,14 @@
-import { UrlBakuMachines, UrlBakuModule, requestOptionsGet,requestOptionsDelete } from "../controller/template.js";
+import { UrlBakuModuleMachine, UrlBakuMachine, requestOptionsGet,requestOptionsDelete } from "../controller/template.js";
 
 let currentPage = 1;
 
 document.addEventListener('DOMContentLoaded', function() {
-    const machineId = getmachineIdFromURL();
-    updateHrefWithmachineId(machineId);
+    const machineId = getMachineIdFromURL();
+    updateHrefWithMachineId(machineId);
     fetchModules(machineId, currentPage);
 
     function fetchModules(machineId, page) {
-        fetch(`${UrlBakuMachines}/${machineId}?page=${page}`, requestOptionsGet)
+        fetch(`${UrlBakuMachine}/${machineId}?page=${page}`, requestOptionsGet)
             .then(response => response.json())
             .then(data => {
                 updateTable(data);
@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <button class="btn btn-outline-primary tambah-detail-proses" data-module-id="${module.id}">Tambah Detail Proses</button>
                     <button class="btn btn-outline-primary view-detail-proses" data-module-id="${module.id}">View Detail Proses</button>
                 </td>
+
                <td class="fw-bolder text-gray-500">
                     <button class="btn btn-outline-warning edit-module" data-module-id="${module.id}">
                         <i class="mdi mdi-pencil"></i> Edit
@@ -78,7 +79,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function bindEventListeners() {
-        // Event listener for detail buttons
         document.querySelectorAll('.btn-outline-success').forEach(button => {
             button.addEventListener('click', event => {
                 const id = event.target.getAttribute('data-module');
@@ -89,14 +89,14 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.tambah-detail-proses').forEach(button => {
             button.addEventListener('click', event => {
                 const moduleId = event.target.getAttribute('data-module-id');
-                window.location.href = `tambah-detail-proses.html?module_id=${moduleId}`;
+                window.location.href = `tambah-detail-proses.html?module_id=${moduleId}&machineId=${machineId}`;
             });
         });
         document.querySelectorAll('.view-detail-proses').forEach(button => {
             button.addEventListener('click', event => {
                 const moduleId = event.target.getAttribute('data-module-id');
-                const machineId = getmachineIdFromURL();
-                window.location.href = `view-detail-proses-mesin.html?module_id=${moduleId}&machineId=${machineId}`;
+                const machineId = getMachineIdFromURL();
+                window.location.href = `view-detail-proses-produksi.html?module_id=${moduleId}&machineId=${machineId}`;
             });
         });
 
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
         
     }
-    function getmachineIdFromURL() {
+    function getMachineIdFromURL() {
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get('id');
     }
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
             cancelButtonText: 'Batal'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`${UrlBakuModule}${moduleId}`, {
+                fetch(`${UrlBakuModuleMachine}${moduleId}`, {
                     method: 'DELETE',
                     ...requestOptionsDelete
                 })
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         'Module has been deleted.',
                         'success'
                     ).then(() => {
-                        fetchModules(getmachineIdFromURL(), currentPage); // Refresh the table
+                        fetchModules(getMachineIdFromURL(), currentPage); // Refresh the table
                     });
                 })
                 .catch(error => {
@@ -168,13 +168,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    function updateHrefWithmachineId(machineId) {
+    function updateHrefWithMachineId(machineId) {
         const addButton = document.querySelector('a.btn-primary');
         if (addButton) {
-            addButton.href = `tambah-modul-mesin.html?machineId=${machineId}`;
+            addButton.href = `tambah-modul-produksi.html?machineId=${machineId}`;
         }
     }
-    function getmachineIdFromURL() {
+    function getMachineIdFromURL() {
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get('id');
     }
