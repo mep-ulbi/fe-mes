@@ -79,7 +79,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function bindEventListeners() {
-        // Event listener for detail buttons
         document.querySelectorAll('.btn-outline-success').forEach(button => {
             button.addEventListener('click', event => {
                 const id = event.target.getAttribute('data-module');
@@ -90,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.tambah-detail-proses').forEach(button => {
             button.addEventListener('click', event => {
                 const moduleId = event.target.getAttribute('data-module-id');
-                window.location.href = `tambah-detail-proses.html?module_id=${moduleId}`;
+                window.location.href = `tambah-detail-proses.html?module_id=${moduleId}&productionId=${productionId}`;
             });
         });
         document.querySelectorAll('.view-detail-proses').forEach(button => {

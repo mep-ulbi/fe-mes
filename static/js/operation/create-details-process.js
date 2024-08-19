@@ -2,6 +2,7 @@ import { UrlProductionDetails, requestOptionsPost } from "../controller/template
 
 document.addEventListener('DOMContentLoaded', function() {
     const moduleId = getModuleIdFromURL();
+    const productionId = getProductionIdFromURL();
 
     const tambahButton = document.getElementById('tambahButton');
     tambahButton.addEventListener('click', function() {
@@ -13,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const utilisasiMesin = document.getElementById('utilisasi_mesin').value;
 
         if (namaProses && waktuM && outputPerUnit && jumlahKebutuhanPerUnit && processType && utilisasiMesin) {
-            postProcessDetail(moduleId, namaProses, waktuM, outputPerUnit, jumlahKebutuhanPerUnit, processType, utilisasiMesin);
+            postProcessDetail(productionId,moduleId, namaProses, waktuM, outputPerUnit, jumlahKebutuhanPerUnit, processType, utilisasiMesin);
         } else {
             Swal.fire({
                 title: 'Error!',
@@ -24,9 +25,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    function postProcessDetail(moduleId, namaProses, waktuM, outputPerUnit, jumlahKebutuhanPerUnit, processType, utilisasiMesin) {
+    function postProcessDetail(productionId, moduleId, namaProses, waktuM, outputPerUnit, jumlahKebutuhanPerUnit, processType, utilisasiMesin) {
         const data = {
-            module_id: moduleId,
+            productionId: parseInt(productionId),
+            module_id: parseInt(moduleId),
             nama_proses: namaProses,
             waktu_m: parseInt(waktuM),
             output_per_unit: parseInt(outputPerUnit),
@@ -34,7 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
             process_type: processType,
             utilisasi_mesin: utilisasiMesin
         };
-
         fetch(`${UrlProductionDetails}`, {
             method: 'POST',
             headers: {
@@ -68,5 +69,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function getModuleIdFromURL() {
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get('module_id');
+    }
+    function getProductionIdFromURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('productionId');
     }
 });
