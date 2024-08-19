@@ -89,14 +89,14 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.tambah-detail-proses').forEach(button => {
             button.addEventListener('click', event => {
                 const moduleId = event.target.getAttribute('data-module-id');
-                window.location.href = `tambah-detail-proses.html?module_id=${moduleId}&machineId=${machineId}`;
+                window.location.href = `tambah-detail-proses-mesin.html?module_id=${moduleId}&machineId=${machineId}`;
             });
         });
         document.querySelectorAll('.view-detail-proses').forEach(button => {
             button.addEventListener('click', event => {
                 const moduleId = event.target.getAttribute('data-module-id');
                 const machineId = getMachineIdFromURL();
-                window.location.href = `view-detail-proses-produksi.html?module_id=${moduleId}&machineId=${machineId}`;
+                window.location.href = `view-detail-proses-mesin.html?module_id=${moduleId}&machineId=${machineId}`;
             });
         });
 
@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.edit-module').forEach(button => {
             button.addEventListener('click', event => {
                 const moduleId = event.target.getAttribute('data-module-id');
-                window.location.href = `edit-modul-produksi.html?id=${moduleId}`;
+                window.location.href = `edit-modul-mesin.html?id=${moduleId}`;
 
             });
         });
@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
             cancelButtonText: 'Batal'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`${UrlBakuModuleMachine}${moduleId}`, {
+                fetch(`${UrlBakuModuleMachine}/${moduleId}`, {
                     method: 'DELETE',
                     ...requestOptionsDelete
                 })
@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateHrefWithMachineId(machineId) {
         const addButton = document.querySelector('a.btn-primary');
         if (addButton) {
-            addButton.href = `tambah-modul-produksi.html?machineId=${machineId}`;
+            addButton.href = `tambah-modul-mesin.html?machineId=${machineId}`;
         }
     }
     function getMachineIdFromURL() {
