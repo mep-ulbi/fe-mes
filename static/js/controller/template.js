@@ -65,3 +65,7 @@ export let UrlProductionSteps = `${BaseUrl}/api/production`;
 
 // API OPERATIONS
 export let UrlOperations = `${BaseUrl}/api/operations`;
+
+// SUMMARY
+export let UrlSumProduksi = `${BaseUrl}/api/productions-summary`;
+export let UrlSumMesin = `${BaseUrl}/api/machines-summary`;
