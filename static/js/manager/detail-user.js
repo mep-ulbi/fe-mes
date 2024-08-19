@@ -12,7 +12,6 @@ fetch(UrlUsers + `/${id}`, requestOptionsGet)
 		if (values && values.data) {
 			document.getElementById("name").value = values.data.name;
 			document.getElementById("email").value = values.data.email;
-			document.getElementById("password").value = values.data.password;
 			document.getElementById("role_id").value = values.data.role.name;
 		} else {
 			console.log("Data tidak ditemukan");
