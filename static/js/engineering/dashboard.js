@@ -21,14 +21,14 @@ document.addEventListener('DOMContentLoaded', function() {
 function totalProduction(totalCount) {
     const totalProductionMobile = document.getElementById('totalProductionMobile');
     const totalProductionDesktop = document.getElementById('totalProductionDesktop')
-    totalProductionMobile.innerHTML = totalCount;
-    totalProductionDesktop.innerHTML = totalCount;
+    totalProductionMobile.innerHTML = totalCount || 0    ;
+    totalProductionDesktop.innerHTML = totalCount|| 0;
 }
 
 // Function to update total production count in the HTML
 function totalMachine(totalCount) {
     const totalMachineMobile = document.getElementById('totalMachineMobile');
     const totalMachineDesktop = document.getElementById('totalMachineDesktop');
-    totalMachineMobile.innerHTML = totalCount;
-    totalMachineDesktop.innerHTML = totalCount;
+    totalMachineMobile.innerHTML = totalCount || 0;
+    totalMachineDesktop.innerHTML = totalCount || 0;
 }
