@@ -90,7 +90,7 @@
     </div>
     <ul class="nav flex-column pt-3 pt-md-0">
       <li class="nav-item">
-        <a href="../../index.html" class="nav-link d-flex align-items-center">
+        <a href="dashboard.html" class="nav-link d-flex align-items-center">
           <span class="sidebar-icon">
             <img src="../../assets/img/favicon/logo-mes.png" height="60" width="60" alt="Volt Logo">
           </span>
@@ -233,14 +233,11 @@
                   </div>
               </div>
               
-                <div class="col-12 mb-4">
+                <div id="grafikProduksi" class="col-12 mb-4">
                     <div class="card bg-yellow-100 border-0 shadow">
                         <div class="card-header d-sm-flex flex-row align-items-center flex-0">
                             <div class="d-block mb-3 mb-sm-0">
-                                <div class="fs-5 fw-normal mb-2"><b>Sales Value</b></div>
-                                <div class="small mt-2"> 
-                                    <span class="fw-normal me-2">Yesterday</span>
-                                </div>
+                                <div class="fs-5 fw-normal mb-2"><b>Produksi</b></div>
                             </div>
                         </div>
                         <div class="card-body p-2">
@@ -248,12 +245,26 @@
                         </div>
                     </div>
                 </div>
+
+                <div id="grafikMesin" class="col-12 mb-4">
+                  <div class="card bg-yellow-100 border-0 shadow">
+                      <div class="card-header d-sm-flex flex-row align-items-center flex-0">
+                          <div class="d-block mb-3 mb-sm-0">
+                              <div class="fs-5 fw-normal mb-2"><b>Mesin</b></div>
+                          </div>
+                      </div>
+                      <div class="card-body p-2">
+                          <div class="ct-chart-sales-value ct-double-octave ct-series-g"></div>
+                      </div>
+                  </div>
+              </div>
             </div>
         </main>
 
 <!-- JS Core -->
 <script src="../../static/js/controller/logout.js" type="module"></script>
 <script src="../../static/js/manager/dashboard.js" type="module"></script>
+<script src="../../static/js/manager/grafik-dashboard.js" type="module"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <!-- Core -->
@@ -295,7 +306,7 @@
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 <!-- Volt JS -->
-<script src="../../assets/js/volt.js"></script>
+<!-- <script src="../../assets/js/volt.js"></script> -->
 
     
 </body>

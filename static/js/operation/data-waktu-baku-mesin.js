@@ -171,7 +171,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateHrefWithmachineId(machineId) {
         const addButton = document.querySelector('a.btn-primary');
         if (addButton) {
-            addButton.href = `tambah-modul-produksi.html?machineId=${machineId}`;
+            addButton.href = `tambah-modul-mesin.html?machineId=${machineId}`;
         }
     }
     function getmachineIdFromURL() {

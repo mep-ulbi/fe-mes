@@ -21,18 +21,20 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateTable(data) {
         const tableBody = document.getElementById('tableBody');
         tableBody.innerHTML = '';
-
+    
         data.data.forEach((step, index) => {
             const row = document.createElement('tr');
             row.style.textAlign = 'center';
-
+    
             let actionButton = '';
-            if (!step.start_time) {
-                actionButton = `<button class="btn btn-sm btn-success TambahTugas" data-machine="${step.machineId}" data-steps="${step.id}">Tambah Tugas</button>`;
-            } else if (step.start_time && !step.end_time) {
-                actionButton = `<button class="btn btn-sm btn-primary LanjutkanTugas" data-machine="${step.machineId}" data-steps="${step.id}">Lanjutkan Tugas</button>`;
+            if (step.step_name !== "Proses Pekerjaan") {
+                if (!step.start_time) {
+                    actionButton = `<button class="btn btn-sm btn-success TambahTugas" data-machine="${step.machineId}" data-steps="${step.id}">Tambah Tugas</button>`;
+                } else if (step.start_time && !step.end_time) {
+                    actionButton = `<button class="btn btn-sm btn-primary LanjutkanTugas" data-machine="${step.machineId}" data-steps="${step.id}">Lanjutkan Tugas</button>`;
+                }
             }
-
+    
             row.innerHTML = `
                 <th class="text-gray-900" scope="row">${data.from + index}</th>
                 <td class="fw-bolder text-gray-500">${step.step_name}</td>

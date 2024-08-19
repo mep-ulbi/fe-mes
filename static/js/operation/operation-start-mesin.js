@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             Swal.fire({
                 title: 'Success!',
-                text: 'Production step started successfully.',
+                text: 'Machine step started successfully.',
                 icon: 'success',
                 confirmButtonText: 'OK'
             }).then(() => {
@@ -42,10 +42,10 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         })
         .catch(error => {
-            console.error('Error starting production step:', error);
+            console.error('Error starting machine step:', error);
             Swal.fire({
                 title: 'Error!',
-                text: 'Failed to start production step.',
+                text: 'Failed to start machine step.',
                 icon: 'error',
                 confirmButtonText: 'OK'
             });

@@ -25,8 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
             row.innerHTML = `
                 <th class="text-gray-900" scope="row">${data.from + index}</th>
                 <td class="fw-bolder text-gray-500">${item.kode_produk}</td>
-                <td class="fw-bolder text-gray-500">${item.productionId}</td>
-                <td class="fw-bolder text-gray-500"><a href="${item.dok_item_lead_time}"target="_blank">Download File</a></td>
+                <td class="fw-bolder text-gray-500">${item.nama_produk}</td>
                 <td class="fw-bolder text-gray-500">
                     <p>Assy MH: ${item.assy_mh}</p>
                     <p>Assy MCH: ${item.assy_mch}</p>

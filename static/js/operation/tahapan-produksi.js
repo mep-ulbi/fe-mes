@@ -27,10 +27,12 @@ document.addEventListener('DOMContentLoaded', function() {
             row.style.textAlign = 'center';
 
             let actionButton = '';
-            if (!step.start_time) {
-                actionButton = `<button class="btn btn-sm btn-success TambahTugas" data-production="${step.productionId}" data-steps="${step.id}">Tambah Tugas</button>`;
-            } else if (step.start_time && !step.end_time) {
-                actionButton = `<button class="btn btn-sm btn-primary LanjutkanTugas" data-production="${step.productionId}" data-steps="${step.id}">Lanjutkan Tugas</button>`;
+            if (step.step_name !== "Proses Pekerjaan") {
+                if (!step.start_time) {
+                    actionButton = `<button class="btn btn-sm btn-success TambahTugas" data-production="${step.productionId}" data-steps="${step.id}">Tambah Tugas</button>`;
+                } else if (step.start_time && !step.end_time) {
+                    actionButton = `<button class="btn btn-sm btn-primary LanjutkanTugas" data-production="${step.productionId}" data-steps="${step.id}">Lanjutkan Tugas</button>`;
+                }
             }
 
             row.innerHTML = `
