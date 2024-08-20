@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.querySelectorAll('.edit-process').forEach(button => {
             button.addEventListener('click', event => {
                 const detailId = event.target.getAttribute('data-detail-id');
-                window.location.href = `edit-detail-proses.html?id=${detailId}`;
+                window.location.href = `edit-detail-proses.html?id=${detailId}&module_id=${getModuleIdFromURL()}&productionId=${getProductionIdFromURL()}`;
             });
         });
 
@@ -142,5 +142,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function getModuleIdFromURL() {
         const urlParams = new URLSearchParams(window.location.search);
         return urlParams.get('module_id'); // Assuming 'module_id' is the query parameter for module_id
+    }
+    function getProductionIdFromURL() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('productionId'); // Assuming 'production_id' is the query parameter for production_id
     }
 });

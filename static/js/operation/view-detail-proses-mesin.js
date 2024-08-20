@@ -1,15 +1,25 @@
 import { UrlMachineDetails, UrlBakuModuleMachine , requestOptionsGet,requestOptionsDelete } from "../controller/template.js";
-
 document.addEventListener('DOMContentLoaded', function() {
     const moduleId = getModuleIdFromURL();
-    fetchModuleDetails(moduleId, 1);  
+    let currentPage = 1; // Tambahkan ini untuk melacak halaman saat ini
+    fetchModuleDetails(moduleId, currentPage);  
 
     function fetchModuleDetails(moduleId, page) {
         fetch(`${UrlBakuModuleMachine}/${moduleId}?page=${page}`, requestOptionsGet)
             .then(response => response.json())
             .then(data => {
-                updateTable(data.module, data.details_pagination.from);
-                updatePagination(data.details_pagination, moduleId);
+                console.log('Full response data:', data); // Log seluruh data untuk inspeksi
+                if (data && data.module) {
+                    const startRow = data.details_pagination ? data.details_pagination.from : 1; // Default ke 1 jika undefined
+                    updateTable(data.module, startRow);
+                    if (data.details_pagination) {
+                        updatePagination(data.details_pagination, moduleId);
+                    } else {
+                        console.log('No pagination data available.');
+                    }
+                } else {
+                    console.error('Module data is missing or undefined');
+                }
             })
             .catch(error => console.error('Error fetching module details:', error));
     }
@@ -41,12 +51,10 @@ document.addEventListener('DOMContentLoaded', function() {
                             <i class="mdi mdi-delete"></i> Delete
                         </button>
                     </td>
-
                 `;
                 tableBody.appendChild(row);
             });
             bindEventListeners();
-
         } else {
             const row = document.createElement('tr');
             row.style.textAlign = 'center';
@@ -97,9 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         'success'
                     ).then(() => {
                         window.location.reload();
-
-                        fetchModuleDetails(getModuleIdFromURL(), currentPage).then(() => {
-                        }); // Refresh the table
+                        fetchModuleDetails(getModuleIdFromURL(), currentPage); // Refresh the table
                     });
                 })
                 .catch(error => {
